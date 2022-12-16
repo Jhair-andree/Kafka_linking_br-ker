@@ -1,0 +1,54 @@
+
+
+### BUGS ###
+      bug: when topic config names changes, related sender config combobox does not always refresh this new name with dropdown list (but it is refreshed in the 'selected' value)
+### TODO ###
+
+todo: big feature : enable providing multiple bootstrap servers in broker config
+    this will cause lots of compilations
+        e.g. checking that all bootstrap servers belong to the same cluster
+        e.g. detection that some nodes (or all) goes does down during listeners working
+        e.g. check that all advertised listeners from each node is accessible
+        (but maybe only one valid advertised listener is enough ?)
+            question: how to detect that nodes with 'accessible' advertised listeners went down but the node(s) with
+                inaccessible advertised listeners are up ?
+
+
+
+
+todo: add word wrap enable/disable checkbox for all CodeArea / LogArea
+todo: refactor kafka proxy class
+todo: add isSuccess bar with popup hints (similar in Intelij IDEA) to communicate with the user, and remove 'logging window'
+todo: add config opiton - add opition: don't show warning about invalid configuraiton
+todo: on Linux (Mint with Xfce) - application fonts are ugly and too big - suggest other fonts for linux ?
+
+
+### Refactor
+todo: replace (wherever possible)
+from: GuiUtils.configureTextFieldToAcceptOnlyValidData
+to: configureTextFieldToAcceptOnlyDecimalValues
+
+        ValidatorUtils.configureTextFieldToAcceptOnlyDecimalValues(receiveMsgLimitTextField);
+
+### TODO_LOW_PRIORITY ###
+todo: feature: replace 'isSuccess' button with 'connect/disconnect' . Connect will result in fetching info every e.g. 1 second
+todo: low_priority: report in details inconsistent configuration (which node has what settings)
+todo: low_priority: when fetching new broker, if configuration on some tab does need to be updated, do not refresh it
+todo: low_priority save user sorting type for topic (only during program work - dont need to be persistent)
+todo: add handling DEL button in LIstVIew to delete config
+todo: add handling INS button in listView to add new config
+todo: add gui configuration window (e.g. define all timeouts in application instead of hardcoded values)
+todo: add checkbox to NOT send empty messages (if they get evaluated to empty string)
+todo: add 'after EACH message' to be 'symmetric' when sending message template is concerned
+todo: add wordwrap checkbox for all text areas
+
+### NOT DONE - DONT KNOW SOLUTION ###
+expand table column width to content
+print replication factor for topic in summary
+
+
+### Add to future config window
+ - should resize column width to content
+
+
+
